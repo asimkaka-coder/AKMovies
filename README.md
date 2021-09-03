@@ -11,7 +11,7 @@ Learning pagination by building a tv shows app
 
 - Dagger Hilt
 - Retrofit
-- Paging 3
+- Paging 3 with Load State Adapter
 - Flow Live Data
 - Coroutines
 - Material Design
