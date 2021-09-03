@@ -24,7 +24,11 @@ Learning pagination by building a tv shows app
 ## Demo
 
 
-https://github.com/asimkaka-coder/AKMovies/blob/master/demo/movie_demo.mp4
+
+
+https://user-images.githubusercontent.com/68073982/132054864-424c6578-e274-45b3-9b89-d4c907c7ff0c.mp4
+
+
 
 
   
