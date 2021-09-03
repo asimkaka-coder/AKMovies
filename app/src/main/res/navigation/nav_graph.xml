@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/popularShowsFragment">
+
+    <fragment
+        android:id="@+id/popularShowsFragment"
+        android:name="com.example.akmovies.ui.fragments.PopularShowsFragment"
+        android:label="popular_shows_fragment"
+        tools:layout="@layout/popular_shows_fragment" >
+        <action
+            android:id="@+id/action_popularShowsFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.akmovies.ui.fragments.DetailFragment"
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/action_detailFragment_to_popularShowsFragment"
+            app:destination="@id/popularShowsFragment"
+            app:popUpTo="@id/popularShowsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="tvShow"
+            app:argType="com.example.akmovies.data.models.TvShow" />
+    </fragment>
+</navigation>

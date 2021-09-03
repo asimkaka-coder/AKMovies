@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AKMovies</string>
+
+    <string name="release_date">Release Date: %s</string>
+    <string name="network_name">Network: %s</string>
+    <string name="current_status">Status: %s</string>
+
+    <string name="category_text">Category: %s</string>
+    <string name="total_seasons">Total Episodes: %d</string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryColor"
+        tools:context=".ui.fragments.DetailFragment"
+
+        >
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_back"
+            android:layout_margin="8dp"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/moviePoster"
+            android:layout_width="300dp"
+            android:layout_height="390dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_launcher_background"
+            android:layout_marginTop="40dp"
+            app:layout_constraintCircleRadius="20dp"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            />
+        <TextView
+            android:id="@+id/movieName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/moviePoster"
+            app:layout_constraintEnd_toEndOf="@id/moviePoster"
+            app:layout_constraintTop_toBottomOf="@id/moviePoster"
+            tools:text = "Android Love"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/movieDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movieName"
+            android:layout_margin="10dp"
+            tools:text="@tools:sample/lorem/random"
+            android:maxLines="6"
+            android:ellipsize="end"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/movieCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movieDescription"
+            android:layout_margin="10dp"
+            tools:text = "Category: Technology, Development"
+            android:textSize="18sp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/totalSeasons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movieCategory"
+            android:layout_margin="10dp"
+            tools:text = "Total Seasons: 8"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalSeasons"
+            android:layout_margin="10dp"
+            android:text="Rating: "
+            android:textSize="18sp"
+            android:visibility="gone"
+            />
+
+        <RatingBar
+            android:id="@+id/movieRatingBar"
+            style="?android:attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingText"
+            app:layout_constraintStart_toEndOf="@+id/ratingText"
+            app:layout_constraintTop_toTopOf="@+id/ratingText"
+            android:visibility="gone"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
