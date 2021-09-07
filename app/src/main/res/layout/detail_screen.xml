@@ -113,6 +113,7 @@
             app:layout_constraintStart_toEndOf="@+id/ratingText"
             app:layout_constraintTop_toTopOf="@+id/ratingText"
             android:visibility="gone"
+            android:numStars="5"
             />
 
 

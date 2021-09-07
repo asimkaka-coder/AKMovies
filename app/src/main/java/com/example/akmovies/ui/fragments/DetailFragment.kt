@@ -48,14 +48,12 @@ class DetailFragment:Fragment(R.layout.detail_screen) {
         viewModel.movieDetail.observe(viewLifecycleOwner,{
             val tvShowDetails = it.tvShow
             val categories = tvShowDetails.genres.toString()
-            val rating = tvShowDetails.rating.toFloat()
             binding.apply {
                 movieName.text = tvShowDetails.name
                 movieDescription.text = tvShowDetails.description
                 movieCategory.text = getString(R.string.category_text,categories)
                 totalSeasons.text = getString(R.string.total_seasons,tvShowDetails.episodes.size)
-                movieRatingBar.numStars = 5
-                movieRatingBar.rating = (rating)*0.5.toFloat()
+                movieRatingBar.rating = 0.5.toFloat()*tvShowDetails.rating.toFloat()
                 ratingText.visibility = View.VISIBLE
                 movieRatingBar.visibility = View.VISIBLE
                 Log.d("RATING",movieRatingBar.rating.toString())
@@ -67,9 +65,12 @@ class DetailFragment:Fragment(R.layout.detail_screen) {
         })
 
 
-
+        /* Using navController instead of navigation action
+        * so that the fragment does not get reload
+        * everytime
+        * */
         binding.backButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_detailFragment_to_popularShowsFragment)
+            it.findNavController().navigateUp()
         }
     }
 
